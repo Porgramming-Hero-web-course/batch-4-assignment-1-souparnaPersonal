@@ -11,7 +11,7 @@ type Rectangle = {
 
 const calculateShapeArea = (data : Circle | Rectangle) : number =>{
    if('radius' in data) {
-    return Math.PI * data.radius * data.radius
+    return parseFloat((Math.PI * data.radius * data.radius).toFixed(2))
    }  else {
     return data.height * data.width
    }
